@@ -43,6 +43,7 @@ git clone https://github.com/biubug6/Pytorch_Retinaface.git
 | Blur | 5 | 由于相机抖动造成的模糊 |
 | Challenge | 10 | 其他的比较有挑战性的车牌 |
 | NP | 5  |没有车牌的新车 |
+
 **注释说明**
 
 注释嵌入在文件名中。
@@ -81,6 +82,8 @@ ads = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q'
 > python detect.py -m ./weights/mobilenet0.25_epoch_19_ccpd.pth -image test_images/0.jpg
 
 > 效果更好的预训练模型在后期陆续提供
+
+![效果](https://github.com/gm19900510/Pytorch_Retina_License_Plate/blob/master/test1.png)
 
 ## TODO
 - 评估
