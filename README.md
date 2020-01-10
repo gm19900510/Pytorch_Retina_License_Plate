@@ -1,3 +1,4 @@
+
 # Pytorch_Retina_License_Plate
 利用[RetinaFace](https://github.com/biubug6/Pytorch_Retinaface)进行迁移学习实现的车牌检测、车牌四角定位、车牌矫正对齐程序。
 当Retinaface使用mobilenet0.25作为骨干网时，模型大小仅为1.8M
@@ -30,18 +31,22 @@ git clone https://github.com/biubug6/Pytorch_Retinaface.git
  [https://github.com/detectRecog/CCPD](https://github.com/detectRecog/CCPD)
  
 **数据容量**
-CCPD | 数量/k | 描述
--------- | -----|  -----
-Base | 200 |正常车牌
-FN | 20 | 距离摄像头相当的远或者相当近
-DB | 20 |光线暗或者比较亮
-Rotate  |10 | 水平倾斜20-25°，垂直倾斜-10-10°
-Tilt  |10 | 水平倾斜15-45°，垂直倾斜15-45°
-Weather | 10 | 在雨天，雪天，或者雾天
-Blur | 5 | 由于相机抖动造成的模糊
-Challenge | 10 | 其他的比较有挑战性的车牌
-NP | 5  |没有车牌的新车
+| CCPD | 数量/k | 描述 |
+|:-|:-:|:-:|
+| Base | 200 |正常车牌 |
+| FN | 20 | 距离摄像头相当的远或者相当近 |
+| DB | 20 |光线暗或者比较亮 |
+| Rotate  |10 | 水平倾斜20-25°，垂直倾斜-10-10° |
+| Tilt  |10 | 水平倾斜15-45°，垂直倾斜15-45° |
+| Weather | 10 | 在雨天，雪天，或者雾天 |
+| Blur | 5 | 由于相机抖动造成的模糊 |
+| Challenge | 10 | 其他的比较有挑战性的车牌 |
+| NP | 5  |没有车牌的新车 |
 
+
+| Style | easy | medium | hard |
+|:-|:-:|:-:|:-:|
+| Pytorch (same parameter with Mxnet) | 88.67% | 87.09% | 80.99% |
 **注释说明**
 
 注释嵌入在文件名中。
@@ -71,11 +76,10 @@ ads = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q'
   
   > 注意修改执行文件中的数据集地址
 -  训练
-> 培训之前，您可以在中检查网络配置（例如batch_size，min_sizes和步骤等。）data/config.py and train.py。
-
-
->CUDA_VISIBLE_DEVICES = 0,1,2,3 python train.py --network resnet50或
-CUDA_VISIBLE_DEVICES = 0 python train.py --network mobile0.25
+  	>培训之前，您可以在中检查网络配置（例如batch_size，min_sizes和步骤等。）data/config.py and train.py。
+  
+  	>CUDA_VISIBLE_DEVICES = 0,1,2,3 python train.py --network resnet50或
+  CUDA_VISIBLE_DEVICES = 0 python train.py --network mobile0.25
 
 ## 测试
 > python detect.py -m ./weights/mobilenet0.25_epoch_19_ccpd.pth -image test_images/0.jpg
