@@ -31,6 +31,7 @@ git clone https://github.com/biubug6/Pytorch_Retinaface.git
  [https://github.com/detectRecog/CCPD](https://github.com/detectRecog/CCPD)
  
 **数据容量**
+
 | CCPD | 数量/k | 描述 |
 |:-|:-:|:-:|
 | Base | 200 |正常车牌 |
@@ -42,11 +43,6 @@ git clone https://github.com/biubug6/Pytorch_Retinaface.git
 | Blur | 5 | 由于相机抖动造成的模糊 |
 | Challenge | 10 | 其他的比较有挑战性的车牌 |
 | NP | 5  |没有车牌的新车 |
-
-
-| Style | easy | medium | hard |
-|:-|:-:|:-:|:-:|
-| Pytorch (same parameter with Mxnet) | 88.67% | 87.09% | 80.99% |
 **注释说明**
 
 注释嵌入在文件名中。
