@@ -15,7 +15,7 @@ print(torch.__version__, torchvision.__version__)
 
 parser = argparse.ArgumentParser(description='RetinaPL')
 # 23 good
-parser.add_argument('-m', '--trained_model', default='./weights/mobilenet0.25_epoch_5_white_ccpd.pth',
+parser.add_argument('-m', '--trained_model', default='./weights/mobilenet0.25_epoch_8_white_ccpd.pth',
                     type=str, help='Trained state_dict file path to open')
 parser.add_argument('--network', default='mobile0.25', help='Backbone network mobile0.25 or resnet50')
 parser.add_argument('--cpu', action="store_true", default=False, help='Use cpu inference')
@@ -24,7 +24,7 @@ parser.add_argument('--top_k', default=1000, type=int, help='top_k')
 parser.add_argument('--nms_threshold', default=0.4, type=float, help='nms_threshold')
 parser.add_argument('--keep_top_k', default=500, type=int, help='keep_top_k')
 parser.add_argument('-s', '--save_image', action="store_true", default=True, help='show detection results')
-parser.add_argument('--vis_thres', default=0.3, type=float, help='visualization_threshold')
+parser.add_argument('--vis_thres', default=0.5, type=float, help='visualization_threshold')
 parser.add_argument('-image', default='test_images/0.jpg', help='test image path')
 args = parser.parse_args()
 
@@ -202,6 +202,6 @@ if __name__ == '__main__':
                 name = "test.jpg"
                 cv2.imwrite(name, processed)
             cv2.imshow('image', img_raw)
-            if cv2.waitKey(100000) & 0xFF == ord('q'):
+            if cv2.waitKey(1000000) & 0xFF == ord('q'):
                 cv2.destroyAllWindows()
 
