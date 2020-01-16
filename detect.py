@@ -15,7 +15,7 @@ print(torch.__version__, torchvision.__version__)
 
 parser = argparse.ArgumentParser(description='RetinaPL')
 # 23 good
-parser.add_argument('-m', '--trained_model', default='./weights/mobilenet0.25_epoch_8_white_ccpd.pth',
+parser.add_argument('-m', '--trained_model', default='./weights/mobilenet0.25_epoch_20_ccpd.pth',
                     type=str, help='Trained state_dict file path to open')
 parser.add_argument('--network', default='mobile0.25', help='Backbone network mobile0.25 or resnet50')
 parser.add_argument('--cpu', action="store_true", default=False, help='Use cpu inference')
