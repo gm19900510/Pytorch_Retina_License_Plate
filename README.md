@@ -21,7 +21,7 @@ RetinaFace的官方代码可以在[这里](https://github.com/deepinsight/insigh
 - cudnn=7.6.4
 ## 安装
 - 克隆并安装
-git clone https://github.com/biubug6/Pytorch_Retinaface.git
+git clone https://github.com/gm19900510/Pytorch_Retina_License_Plate.git
 
 
 
